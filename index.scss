@@ -1,0 +1,13 @@
+@use './scss-modules/page-setup.scss';
+@use './scss-modules/search-btn.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
+  opacity: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/book.jpeg);
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.search__form button, .search__form input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.search__form input {
+  min-width: 500px;
+  height: 40px;
+  padding: 10px 50px 10px 0;
+  border-bottom: 2px solid white;
+  color: white;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 40px;
+  font-family: "Roboto Slab", serif;
+  word-spacing: 2px;
+}
+.search__form button {
+  height: 40px;
+  margin-left: -30px;
+}
+.search__form button:hover {
+  cursor: pointer;
+}
+.search__form button i {
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a;
+  opacity: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

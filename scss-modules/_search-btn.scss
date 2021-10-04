@@ -1,0 +1,36 @@
+%remove-border {
+  background: none;
+  border: none;
+  outline: none;
+}
+.search {
+  &__form {
+    input {
+      min-width: 500px;
+      height: 40px;
+      padding: 10px 50px 10px 0;
+      @extend %remove-border;
+      border-bottom: 2px solid white;
+
+      color: white;
+      overflow: hidden;
+      font-size: 20px;
+      line-height: 40px;
+      font-family: 'Roboto Slab', serif;
+      word-spacing: 2px;
+    }
+    button {
+      height: 40px;
+      margin-left: -30px;
+      @extend %remove-border;
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        color: white;
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
