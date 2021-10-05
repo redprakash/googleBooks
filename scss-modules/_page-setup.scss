@@ -9,19 +9,20 @@ body {
   background-position: center top;
   background-attachment: fixed;
   background-size: cover;
+  font-family: 'Roboto Slab', serif;
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
+  color: rgb(199, 192, 192);
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: white;
+  color: rgb(199, 192, 192);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: white;
+  color: rgb(199, 192, 192);
 }
