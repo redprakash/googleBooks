@@ -10,7 +10,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: "Roboto Slab", serif;
-  overflow-x: hidden;
+  background-color: #0e8676;
 }
 
 ::placeholder {
@@ -37,12 +37,11 @@ body {
 }
 
 .search__form input {
-  min-width: 400px;
+  width: 400px;
   height: 40px;
   padding: 10px 50px 10px 0;
   border-bottom: 2px solid white;
   color: white;
-  overflow: hidden;
   font-size: 20px;
   line-height: 40px;
   font-family: "Roboto Slab", serif;
@@ -62,33 +61,61 @@ body {
   font-size: 20px;
   line-height: 20px;
 }
+@media only screen and (max-width: 414px) {
+  .search {
+    display: flex;
+    flex-direction: column;
+  }
+  .search input {
+    width: auto;
+    padding: 10px 10px 10px 0;
+    overflow: hidden;
+  }
+  .search button {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 331px) {
+  .search {
+    display: flex;
+    flex-direction: column;
+  }
+  .search input {
+    width: 200px;
+    padding: 10px 10px 10px 0;
+    overflow: hidden;
+  }
+  .search button {
+    margin-left: 0;
+  }
+}
 
 .container {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #0e8676;
+  justify-content: center;
   padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .header h1 {
-  color: #000303;
-  font-size: 40px;
+  color: #6af5f5;
+  font-size: 2.5rem;
   letter-spacing: 2px;
   word-spacing: 5px;
+  margin-bottom: 40px;
 }
 .header h1 span {
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 .search-result-header h2 {
   color: white;
   letter-spacing: 2px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .books-grid {
@@ -96,6 +123,16 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: black;
+}
+@media only screen and (max-width: 985px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 675px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .booksCard {
@@ -111,11 +148,19 @@ body {
   margin-right: 15px;
   background-color: #c4ccb2;
 }
+@media only screen and (max-width: 370px) {
+  .booksCard__image {
+    display: none;
+  }
+}
 .booksCard__content {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   letter-spacing: 0.6px;
+}
+.booksCard__content__author {
+  margin: 10px 0;
 }
 .booksCard__content__button {
   width: 100px;
