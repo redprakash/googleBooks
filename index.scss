@@ -7,13 +7,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #000000;
-  opacity: 0.75;
-  padding-top: 40px;
+  background-color: #0e8676;
+
+  padding: 40px 0;
 }
 .header {
   h1 {
-    color: rgb(53, 255, 228);
+    color: rgb(0, 3, 3);
     font-size: 40px;
     letter-spacing: 2px;
     word-spacing: 5px;
@@ -26,6 +26,8 @@
   h2 {
     color: white;
     letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -36,16 +38,16 @@
   color: rgb(0, 0, 0);
 }
 .booksCard {
-  height: auto;
   padding: 10px;
   display: flex;
   background: white;
   border-radius: 5px;
-
+  a {
+    text-decoration: none;
+  }
   &__image {
     margin-right: 15px;
-    background-color: yellowgreen;
-    width: 100%;
+    background-color: rgb(196, 204, 178);
   }
   &__content {
     display: flex;
