@@ -9,7 +9,7 @@
   justify-content: space-evenly;
   background-color: #0e8676;
 
-  padding: 40px 0;
+  padding: 40px;
 }
 .header {
   h1 {
@@ -33,7 +33,7 @@
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: rgb(0, 0, 0);
 }
