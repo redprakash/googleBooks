@@ -6,11 +6,11 @@
 }
 
 body {
-  background-image: url(./images/book.jpeg);
   background-position: center top;
   background-attachment: fixed;
   background-size: cover;
   font-family: "Roboto Slab", serif;
+  overflow-x: hidden;
 }
 
 ::placeholder {
@@ -47,6 +47,8 @@ body {
   line-height: 40px;
   font-family: "Roboto Slab", serif;
   word-spacing: 2px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .search__form button {
   height: 40px;
@@ -68,13 +70,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #000000;
-  opacity: 0.75;
-  padding-top: 40px;
+  background-color: #0e8676;
+  padding: 40px 0;
 }
 
 .header h1 {
-  color: #35ffe4;
+  color: #000303;
   font-size: 40px;
   letter-spacing: 2px;
   word-spacing: 5px;
@@ -86,6 +87,8 @@ body {
 .search-result-header h2 {
   color: white;
   letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .books-grid {
@@ -96,16 +99,17 @@ body {
 }
 
 .booksCard {
-  height: auto;
   padding: 10px;
   display: flex;
   background: white;
   border-radius: 5px;
 }
+.booksCard a {
+  text-decoration: none;
+}
 .booksCard__image {
   margin-right: 15px;
-  background-color: yellowgreen;
-  width: 100%;
+  background-color: #c4ccb2;
 }
 .booksCard__content {
   display: flex;
