@@ -5,12 +5,11 @@
   box-sizing: border-box;
 }
 body {
-  //background-image: url(./images/book.jpeg);
   background-position: center top;
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Roboto Slab', serif;
-  overflow-x: hidden;
+  background-color: #0e8676;
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
