@@ -7,6 +7,8 @@ const getBooks = async (searchTerm) => {
 };
 
 const searchBtn = document.querySelector('.searchButton');
+const gridContainer = document.querySelector('.books-grid');
+const searchHeader = document.querySelector('.search-header');
 searchBtn.addEventListener('click', async (e) => {
   e.preventDefault();
   const searchInput = document.querySelector('.searchInput');
@@ -38,10 +40,7 @@ searchBtn.addEventListener('click', async (e) => {
     })
     .join();
 
-  const gridContainer = document.querySelector('.books-grid');
   booksList = booksList.replace(/,/g, '');
   gridContainer.innerHTML = booksList;
-
-  const searchHeader = document.querySelector('.search-header');
   searchHeader.textContent = 'Your search results for : ' + searchQuery;
 });
