@@ -1,5 +1,6 @@
 @use './scss-modules/page-setup.scss';
 @use './scss-modules/search-btn.scss';
+@use './scss-modules/variables';
 .container {
   display: flex;
   flex-direction: column;
@@ -23,7 +24,7 @@
 }
 .search-result-header {
   h2 {
-    color: white;
+    color: variables.$searchResultHeaderColor;
     letter-spacing: 2px;
     margin-top: 50px;
     margin-bottom: 50px;

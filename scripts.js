@@ -23,7 +23,7 @@ searchBtn.addEventListener('click', async (e) => {
       return `
         <div class="booksCard">
           <div class="booksCard__image">
-            <img class="booksImg" src=${book.volumeInfo.imageLinks.thumbnail} />
+            <img class="booksImg" src=${book.volumeInfo.imageLinks.thumbnail} alt="${book.volumeInfo.title}" />
           </div>
           <div class="booksCard__content">
             <div class="booksCard__content__title">${book.volumeInfo.title}</div>
