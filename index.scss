@@ -1,51 +1,64 @@
 @use './scss-modules/page-setup.scss';
 @use './scss-modules/search-btn.scss';
+@use './scss-modules/variables';
 .container {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #000000;
-  opacity: 0.75;
-  padding-top: 40px;
+  justify-content: center;
+  padding: 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 .header {
   h1 {
-    color: rgb(53, 255, 228);
-    font-size: 40px;
+    color: rgb(106, 245, 245);
+    font-size: 2.5rem;
     letter-spacing: 2px;
     word-spacing: 5px;
+    margin-bottom: 40px;
     span {
-      font-size: 48px;
+      font-size: 3rem;
     }
   }
 }
 .search-result-header {
   h2 {
-    color: white;
+    color: variables.$searchResultHeaderColor;
     letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: rgb(0, 0, 0);
+
+  @media only screen and(max-width:985px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and(max-width:675px) {
+    grid-template-columns: 1fr;
+  }
 }
+
 .booksCard {
-  height: auto;
   padding: 10px;
   display: flex;
   background: white;
   border-radius: 5px;
-
+  a {
+    text-decoration: none;
+  }
   &__image {
     margin-right: 15px;
-    background-color: yellowgreen;
-    width: 100%;
+    background-color: rgb(196, 204, 178);
+    @media only screen and(max-width:370px) {
+      display: none;
+    }
   }
   &__content {
     display: flex;
@@ -56,6 +69,7 @@
     &__title {
     }
     &__author {
+      margin: 10px 0;
     }
     &__button {
       width: 100px;

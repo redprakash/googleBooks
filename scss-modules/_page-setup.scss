@@ -1,28 +1,29 @@
 @use '../scss-modules/fonts';
+@use './variables';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-image: url(./images/book.jpeg);
   background-position: center top;
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Roboto Slab', serif;
+  background-color: variables.$bodyColor;
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(199, 192, 192);
+  color: variables.$placeholderColor;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: rgb(199, 192, 192);
+  color: variables.$placeholderColor;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: rgb(199, 192, 192);
+  color: variables.$placeholderColor;
 }
