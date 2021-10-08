@@ -20,6 +20,7 @@ searchBtn.addEventListener('click', async (e) => {
       const title = book.volumeInfo.title;
       const authors = book.volumeInfo.authors;
       const bookreadmore = book.volumeInfo.previewLink;
+
       return `
         <div class="booksCard">
           <div class="booksCard__image">
@@ -30,7 +31,8 @@ searchBtn.addEventListener('click', async (e) => {
             <div class="booksCard__content__author">
               Author/s : ${authors}
             </div>
-            <a href="${bookreadmore}" target="_blank"><div class="booksCard__content__button">Read Book</div>
+
+            <a href="${bookreadmore}" target="_blank" class="moreInfo"><div class="booksCard__content__button">Read Book</div>
             </a>
           </div>
         </div>
@@ -47,12 +49,12 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 
-const openModal = function () {
+const openModal = () => {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
 
-const closeModal = function () {
+const closeModal = () => {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
