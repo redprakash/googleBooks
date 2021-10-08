@@ -10,18 +10,17 @@ searchBtn.addEventListener('click', async (e) => {
   e.preventDefault();
   const searchQuery = searchInput.value;
   if (searchQuery === '') {
-    alert('Please type something to search');
-    return;
-  }
+    openModal();
+  } else {
+    const books = await getBooks(GOOGLEBOOKS_URL, searchQuery);
 
-  const books = await getBooks(GOOGLEBOOKS_URL, searchQuery);
-  const booksList = books.map((book) => {
-    const imgLink =
-      book.volumeInfo.imageLinks?.thumbnail ?? './images/defaultimage.jpeg';
-    const title = book.volumeInfo.title;
-    const authors = book.volumeInfo.authors;
-    const bookreadmore = book.volumeInfo.previewLink;
-    return `
+    const booksList = books.map((book) => {
+      const imgLink =
+        book.volumeInfo.imageLinks?.thumbnail ?? './images/defaultimage.jpeg';
+      const title = book.volumeInfo.title;
+      const authors = book.volumeInfo.authors;
+      const bookreadmore = book.volumeInfo.previewLink;
+      return `
         <div class="booksCard">
           <div class="booksCard__image">
             <img class="booksImg" src=${imgLink} alt="${title}" />
@@ -36,7 +35,33 @@ searchBtn.addEventListener('click', async (e) => {
           </div>
         </div>
     `;
-  });
-  gridContainer.innerHTML = booksList.join('');
-  searchHeader.textContent = `Your search results for :  ${searchQuery} `;
+    });
+
+    gridContainer.innerHTML = booksList.join('');
+    searchHeader.textContent = `Your search results for :  ${searchQuery} `;
+  }
+});
+
+// Modal
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
 });
