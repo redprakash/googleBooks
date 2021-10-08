@@ -13,17 +13,19 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <h1>
-          <span style="color: #4285f4">G</span>
-          <span style="color: #db4437">o</span>
-          <span style="color: #f4b400">o</span>
-          <span style="color: #4285f4">g</span>
-          <span style="color: #0f9d58">l</span>
-          <span style="color: #db4437">e</span>
-          Books
-        </h1>
-      </header>
+      <a href="index.html">
+        <header class="header">
+          <h1>
+            <span style="color: #4285f4">G</span>
+            <span style="color: #db4437">o</span>
+            <span style="color: #f4b400">o</span>
+            <span style="color: #4285f4">g</span>
+            <span style="color: #0f9d58">l</span>
+            <span style="color: #db4437">e</span>
+            Books
+          </h1>
+        </header>
+      </a>
       <div class="search">
         <form action="" class="search__form">
           <input
@@ -43,7 +45,13 @@
 
       <section class="books-grid"></section>
     </div>
-
+    <!--Modal-->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Please enter something to search</h1>
+    </div>
+    <div class="overlay hidden"></div>
+    <!--Modal-->
     <script type="module" src="scripts.js"></script>
   </body>
 </html>

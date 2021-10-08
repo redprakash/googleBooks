@@ -1,6 +1,8 @@
 @use './scss-modules/page-setup.scss';
 @use './scss-modules/search-btn.scss';
 @use './scss-modules/variables';
+@use './scss-modules/modal.scss';
+
 .container {
   display: flex;
   flex-direction: column;
