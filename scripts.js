@@ -1,4 +1,4 @@
-import getBooks from './js-modules/allData.js';
+import getBooks from './js-modules/bookService.js';
 const GOOGLEBOOKS_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
 
 const searchBtn = document.querySelector('.searchButton');
